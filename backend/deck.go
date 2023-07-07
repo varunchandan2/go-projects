@@ -9,9 +9,19 @@ import (
 	"time"
 )
 
-// Create a new type of deck
-// which is a slice of strings
+// Create a struct for card
+type Card struct {
+	suit  string
+	value string
+}
 
+// Create a struct for player
+type player struct {
+	name string
+	hand deck
+}
+
+// Create a new type of deck which is a slice of strings
 type deck []string
 
 func NewDeck() deck {
@@ -33,10 +43,6 @@ func (d deck) print() { // d is the receiver
 	for i, card := range d { // range helps to iterate through the slice
 		fmt.Println(i, card)
 	}
-}
-
-func deal(d deck, handsize int) (deck, deck) {
-	return d[:handsize], d[handsize:]
 }
 
 // this function will convert the slice array type to String type
@@ -71,4 +77,8 @@ func (d deck) shuffle() {
 
 	}
 
+}
+
+func deal(d deck, handsize int) (deck, deck) {
+	return d[:handsize], d[handsize:]
 }
