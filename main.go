@@ -3,13 +3,13 @@ package main
 import (
 	"fmt"
 
-	"github.com/varunchandan2/go-projects/cardsproject"
+	"github.com/varunchandan2/go-projects/cards"
 )
 
 func main() {
-	cards := cardsproject.NewDeck()
-	hand, remainingCards := cardsproject.Deal(cards, 5)
-	cards.Print()
+	card := cards.NewDeck()
+	hand, remainingCards := cards.Deal(card, 5)
+	card.Print()
 	fmt.Println(hand)
 	fmt.Println(remainingCards)
 

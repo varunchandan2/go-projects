@@ -1,4 +1,4 @@
-package cardsproject
+package cards
 
 import (
 	"fmt"
