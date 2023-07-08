@@ -1,3 +1,3 @@
-module go-cards
+module github.com/varunchandan2/go-projects
 
-go 1.16
+go 1.20
