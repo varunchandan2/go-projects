@@ -1,4 +1,4 @@
-package main
+package cardsproject
 
 import (
 	"fmt"
@@ -27,7 +27,7 @@ func NewDeck() deck {
 }
 
 // Create a print function that will print all the cards in the deck
-func (d deck) print() {
+func (d deck) Print() {
 	for i, card := range d {
 		fmt.Println(i, card)
 	}
@@ -67,6 +67,6 @@ func (d deck) shuffle() {
 
 }
 
-func deal(d deck, handsize int) (deck, deck) {
+func Deal(d deck, handsize int) (deck, deck) {
 	return d[:handsize], d[handsize:]
 }

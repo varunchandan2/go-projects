@@ -1,11 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/varunchandan2/go-projects/cardsproject"
+)
 
 func main() {
-	cards := NewDeck()
-	hand, remainingCards := deal(cards, 5)
-	cards.print()
+	cards := cardsproject.NewDeck()
+	hand, remainingCards := cardsproject.Deal(cards, 5)
+	cards.Print()
 	fmt.Println(hand)
 	fmt.Println(remainingCards)
 
