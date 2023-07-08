@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/varunchandan2/go-projects/cards"
+	"github.com/varunchandan2/go-projects/math"
 )
 
 func main() {
@@ -13,18 +14,10 @@ func main() {
 	fmt.Println(hand)
 	fmt.Println(remainingCards)
 
+	fmt.Print("\n")
+	fmt.Println("Project-2 Check for odd or even number")
+
+	numbers := math.CheckNumber()
+	fmt.Println(numbers)
+
 }
-
-//Extra Notes
-
-/*
-	// Type conversion for any data
-	greeting := "Hello World!"
-	fmt.Println([]byte(greeting))
-*/
-
-/*
-Slice arrays all should have the same data type and can grow and shrink
-Arrays defined has defined length, and you have to declare it everytime you use
-
-*/
