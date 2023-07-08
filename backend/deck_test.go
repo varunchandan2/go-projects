@@ -1,6 +1,9 @@
 package main
 
-import "testing"
+import (
+	"os"
+	"testing"
+)
 
 // Check for x number of cards
 // Check the first card is the same
@@ -19,5 +22,21 @@ func TestNewDeck(t *testing.T) {
 	if d[len(d)-1] != "Jack of Hearts" {
 		t.Errorf("Expected the last card Jack of Hearts but got %v", d[len(d)-1])
 	}
+
+}
+
+func TestSaveToDeckAndNewDeckFromFile(t *testing.T) {
+	os.Remove("_decktesting")
+
+	deck := NewDeck()
+	deck.saveToFile("_decktesting")
+
+	loadedDeck := newDeckFromFile("_decktesting")
+
+	if len(loadedDeck) != 52 {
+		t.Errorf("Expected 52 cards in deck, got %v", len(loadedDeck))
+	}
+
+	os.Remove("_decktesting")
 
 }
