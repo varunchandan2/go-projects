@@ -1,1 +1,5 @@
 package files
+
+func ReadAFile() {
+
+}
