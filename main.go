@@ -3,12 +3,15 @@ package main
 import (
 	"fmt"
 
+	files "github.com/varunchandan2/go-projects/Files"
 	"github.com/varunchandan2/go-projects/practice"
 )
 
 // "github.com/varunchandan2/go-projects/cards"
 
 func main() {
+
+	files.ReadAFile()
 
 	links := []string{
 		"http://google.com",

@@ -1,5 +1,10 @@
 package files
 
-func ReadAFile() {
+import "fmt"
 
+func ReadAFile() {
+	file := make([]int, 0)
+
+	file = append(file, 22)
+	fmt.Println(file)
 }
