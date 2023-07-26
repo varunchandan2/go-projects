@@ -14,5 +14,5 @@ func CheckLink(link string, c chan string) {
 	}
 
 	fmt.Println(link, "is up!")
-	c <- "Yep it's up!"
+	c <- "Yep it's up and running!"
 }
